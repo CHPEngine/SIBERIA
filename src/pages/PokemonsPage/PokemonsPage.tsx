@@ -1,4 +1,4 @@
-import { Pokemon } from './Pokemon/Pokemon';
+import {Pokemon} from "./Pokemon/Pokemon";
 import { useState } from 'react';
 import { useRequestPokemonQueries } from '../../utils/api/hooks';
 
