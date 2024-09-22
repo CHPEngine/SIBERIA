@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { requestStat } from '../../../requests';
+import { requestStat } from '@utils/api';
 
 interface UseRequestStatQueryParams {
   id: number;

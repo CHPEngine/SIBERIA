@@ -1,11 +1,11 @@
 import { useQuery } from 'react-query';
-import { requestEvolutionChain } from '../../../requests';
+import { requestEvolutionChain } from '@utils/api';
 
-interface UseRequestPokemonFromQueryParams {
+interface UseRequestEvolutionChainParams {
   id: number;
 }
 export const useRequestEvolutionChainQuery = ({
   params,
   config
-}: RequestQueryParams<UseRequestPokemonFromQueryParams>) =>
+}: RequestQueryParams<UseRequestEvolutionChainParams>) =>
   useQuery(['evolution-chain', params.id], () => requestEvolutionChain({ params }), config);

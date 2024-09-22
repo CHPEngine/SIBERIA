@@ -1,17 +1,9 @@
-import { useQueries } from 'react-query';
-import { requestPokemon } from '../../../requests';
+import { useQuery, useMutation } from 'react-query';
+import { requestPokemon } from '@utils/api';
 
 interface UseRequestPokemonParams {
-  offset: number;
+  id: number;
 }
 
-export const useRequestPokemonQueries = ({ offset }: UseRequestPokemonParams) =>
-  useQueries<any>(
-    Array.from({ length: offset }).map((_, index) => {
-      const pokemonId = index + 1;
-      return {
-        queryKey: ['pokemon', pokemonId],
-        queryFn: () => requestPokemon({ params: { id: pokemonId } })
-      };
-    })
-  );
+export const useRequestPokemonQuery = ({ params, config }: RequestQueryParams<UseRequestPokemonParams>) =>
+  useMutation(['pokemon', params.id], () => requestPokemon({ params }));
