@@ -4,8 +4,6 @@ import { useState } from 'react';
 import { useQueryClient } from 'react-query';
 
 export const PokemonPage = () => {
-  // const client = useQueryClient();
-  // const cache = client.getQueryData(['pokemon', 2]);
 
   const [isPopup, setIsPopup] = useState(false);
 
@@ -14,9 +12,6 @@ export const PokemonPage = () => {
     params: { id: +(params.pokemonId as string) },
     config: {
       staleTime: 5000,
-      onSuccess: (data) => {
-        // console.log(data);
-      }
     }
   });
 

@@ -6,6 +6,5 @@ interface UseRequestEvolutionChainParams {
 }
 export const useRequestEvolutionChainQuery = ({
   params,
-  config
-}: RequestQueryParams<UseRequestEvolutionChainParams>) =>
-  useQuery(['evolution-chain', params.id], () => requestEvolutionChain({ params }), config);
+}: any) =>
+  useQuery(['evolution-chain', params.id], () => requestEvolutionChain({ params }));

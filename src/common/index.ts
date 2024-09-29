@@ -1,1 +1,5 @@
+export * from './buttons'
+export * from './pokemon'
 export * from './PokemonCard/PokemonCard'
+export * from './Spinner/Spinner'
+export * from './PokemonInfo/PokemonInfo'

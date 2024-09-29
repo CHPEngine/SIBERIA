@@ -1,5 +1,5 @@
 .card {
-    @apply flex flex-col p-10 shadow-xl rounded-xl;
+    @apply bg-amber-50 flex flex-col p-10 shadow-xl rounded-xl;
 }
 
 .card_title {

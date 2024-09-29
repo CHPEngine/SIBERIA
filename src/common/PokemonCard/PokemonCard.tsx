@@ -15,8 +15,8 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => (
             <div>{getPokemonId(pokemon.id)}</div>
         </div>
         <div className={styles.card_types}>
-            {pokemon.types.map(({ type }, index) => (
-                <div key={index} className={styles.card_type}>{type.name}</div>
+            {pokemon.types.map(({ type }) => (
+                <div className={styles.card_type}>{type.name}</div>
             ))}
         </div>
         <div>
@@ -26,8 +26,8 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => (
             <div>
                 <div className={styles.card_info_title}>Stats</div>
                 <ul>
-                    {pokemon.stats.map((stat, index) => (
-                        <li key={index} className={styles.card_info_item}>
+                    {pokemon.stats.map((stat) => (
+                        <li className={styles.card_info_item}>
                             {stat.stat.name}: {stat.base_stat}
                         </li>
                     ))}
@@ -36,8 +36,8 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => (
             <div>
                 <div className={styles.card_info_title}>Abilities</div>
                 <ul>
-                    {pokemon.abilities.map(({ ability }, index) => (
-                        <li key={index} className={styles.card_info_item}>{ability.name}</li>
+                    {pokemon.abilities.map(({ ability }) => (
+                        <li className={styles.card_info_item}>{ability.name}</li>
                     ))}
                 </ul>
             </div>
