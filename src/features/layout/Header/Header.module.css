@@ -2,7 +2,7 @@ body {
   @apply pt-32;
 }
 .header {
-  @apply fixed top-0 w-full bg-white shadow-md z-50;
+  @apply fixed top-0 w-full bg-white shadow-md z-40;
 }
 .header_container {
   @apply container flex justify-between py-5;

@@ -1,4 +1,4 @@
-import { useInfiniteQuery, UseInfiniteQueryOptions, useQueries } from 'react-query';
+import { useInfiniteQuery, useQueries } from 'react-query';
 
 import { requestPokemonById, requestPokemons } from '../../requests';
 

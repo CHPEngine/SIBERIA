@@ -13,8 +13,7 @@ export const PokedexPage = () => {
   const results = useRequestPokemonsQueries({ offset });
   const isLoading = results.some((result) => result.isLoading);
   const { data } = useRequestEvolutionChainQuery({
-    params: { id: selectedPokemonId },
-    options: { enabled: !isLoading, cacheTime: 3000 }
+    id: selectedPokemonId
   });
 
   if (isLoading) return null;
