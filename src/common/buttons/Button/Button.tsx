@@ -1,15 +1,15 @@
 import classnames from 'classnames';
-import React from 'react';
+import { ComponentPropsWithRef, FC } from 'react';
 
 import styles from './Button.module.css';
 
 type ButtonVariant = 'contained' | 'outlined';
-interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
+interface ButtonProps extends ComponentPropsWithRef<'button'> {
   variant?: ButtonVariant;
   isLoading?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   children,
   variant = 'contained',
   isLoading = false,

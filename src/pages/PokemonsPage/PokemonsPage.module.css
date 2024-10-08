@@ -1,29 +1,29 @@
 .page {
-    @apply container px-4;
+  @apply container px-4;
 }
 
 .pokemons_container {
-    @apply grid grid-cols-1 gap-5;
+  @apply grid grid-cols-1 gap-5;
 
-    @apply md:grid-cols-3 md:gap-10;
+  @apply md:grid-cols-3 md:gap-10;
 }
 
 .pokemon_container {
-    @apply flex flex-col relative;
+  @apply relative flex flex-col;
 }
 
 .pokemon {
-    @apply flex justify-between px-8 py-5 shadow-md rounded-xl gap-1 items-center bg-white;
+  @apply flex items-center justify-between gap-1 rounded-xl bg-white px-8 py-5 shadow-md;
 }
 
 .pokemon_number {
-    @apply font-light text-base;
+  @apply text-base font-light;
 }
 
 .pokemon_name {
-    @apply font-bold text-2xl text-black capitalize;
+  @apply text-2xl font-bold capitalize text-black;
 }
 
 .close {
-    @apply text-teal-500 text-3xl text-right mb-3;
+  @apply mb-3 text-right text-3xl text-teal-500;
 }
